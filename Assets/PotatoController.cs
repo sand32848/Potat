@@ -10,6 +10,10 @@ public class PotatoController : MonoBehaviour
     [SerializeField] private float camLookSpeed;
     [SerializeField] private GameObject ballTracker;
 
+    [SerializeField] private GameObject posRight;
+    [SerializeField] private GameObject posLeft;
+
+
     private void Start()
     {
         rb.maxAngularVelocity = 5;
@@ -29,22 +33,34 @@ public class PotatoController : MonoBehaviour
         //Debug.DrawRay(transform.position, newDirection, Color.red);
 
         // Calculate a rotation a step closer to the target and applies rotation to this object
-        if(InputController.Instance.movement.y <= -0.5 || InputController.Instance.movement.y >= 0.5)
+        if(InputController.Instance.movement.y != 0)
         {
-            Quaternion rotation = Quaternion.LookRotation(targetDirection);
-            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, camLookSpeed * Time.deltaTime);
+            //transform.rotation = Quaternion.Lerp(from.rotation, to.rotation, timeCount * speed);
+            Vector3 rotateAxisSide = Vector3.Cross(targetDirection, Vector3.down);
+            rb.AddTorque(rotateAxisSide * camLookSpeed);
+
+            //Quaternion rotation = Quaternion.LookRotation(targetDirection);
+            //rotation = Quaternion.Euler(transform.rotation.x, rotation.eulerAngles.y, transform.rotation.z);
+            //transform.rotation = Quaternion.Lerp(transform.rotation, rotation, camLookSpeed * Time.deltaTime);
+        }
+  
+        //Vector3 rotateAxisSide = Vector3.Cross(targetDirection.normalized, Vector3.up);
+        //rb.AddTorque(camLookSpeed * rotateAxisSide);
+        //rb.AddTorque(gimball.transform.forward * InputController.Instance.movement.y * moveSpeed);
+
+        rb.AddForce(new Vector3(0, 0, moveSpeed * InputController.Instance.movement.y));
+
+        if(InputController.Instance.movement.x == 1)
+        {
+            rb.AddForceAtPosition( Vector3.up * -flipSpeed, posRight.transform.position);
+        }
+        else if (InputController.Instance.movement.x == -1)
+        {
+            rb.AddForceAtPosition( Vector3.up * -flipSpeed, posLeft.transform.position);
         }
 
+        //rb.AddTorque(new Vector3(moveSpeed * InputController.Instance.movement.y, 0, 0));
+       // rb.AddTorque(Vector3.Cross(transform.right,Vector3.up) * -InputController.Instance.movement.x * flipSpeed);
 
-        //rb.AddTorque(gimball.transform.forward * InputController.Instance.movement.y * moveSpeed);
-      //  rb.AddTorque(Vector3.Cross(transform.forward, transform.up)  * InputController.Instance.movement.y * moveSpeed);
-
-        print(Vector3.Cross(transform.forward, transform.up));
-
-        rb.AddRelativeTorque(new Vector3(moveSpeed * InputController.Instance.movement.y, 0, 0));
-        rb.AddTorque(Vector3.Cross(transform.right,Vector3.up) * -InputController.Instance.movement.x * flipSpeed);
-
-
-        //transform.rotation = Quaternion.Euler
     }
 }
