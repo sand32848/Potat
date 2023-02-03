@@ -23,44 +23,23 @@ public class PotatoController : MonoBehaviour
     {
         Vector3 targetDirection =  new Vector3(ballTracker.transform.position.x,transform.position.y,ballTracker.transform.position.z) - transform.position;
 
-        //// The step size is equal to speed times frame time.
-        //float singleStep = camLookSpeed * Time.deltaTime;
+        rb.AddForce(new Vector3(moveSpeed, 0, moveSpeed )* InputController.Instance.movement.y);
 
-        //// Rotate the forward vector towards the target direction by one step
-        //Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
-
-        //// Draw a ray pointing at our target in
-        //Debug.DrawRay(transform.position, newDirection, Color.red);
-
-        // Calculate a rotation a step closer to the target and applies rotation to this object
-        if(InputController.Instance.movement.y != 0)
+        if (InputController.Instance.movement.x == 1)
         {
-            //transform.rotation = Quaternion.Lerp(from.rotation, to.rotation, timeCount * speed);
-            Vector3 rotateAxisSide = Vector3.Cross(targetDirection, Vector3.down);
-            rb.AddTorque(rotateAxisSide * camLookSpeed);
-
-            //Quaternion rotation = Quaternion.LookRotation(targetDirection);
-            //rotation = Quaternion.Euler(transform.rotation.x, rotation.eulerAngles.y, transform.rotation.z);
-            //transform.rotation = Quaternion.Lerp(transform.rotation, rotation, camLookSpeed * Time.deltaTime);
-        }
-  
-        //Vector3 rotateAxisSide = Vector3.Cross(targetDirection.normalized, Vector3.up);
-        //rb.AddTorque(camLookSpeed * rotateAxisSide);
-        //rb.AddTorque(gimball.transform.forward * InputController.Instance.movement.y * moveSpeed);
-
-        rb.AddForce(new Vector3(0, 0, moveSpeed * InputController.Instance.movement.y));
-
-        if(InputController.Instance.movement.x == 1)
-        {
-            rb.AddForceAtPosition( Vector3.up * -flipSpeed, posRight.transform.position);
+            rb.AddForceAtPosition(Vector3.up * -flipSpeed, posRight.transform.position);
         }
         else if (InputController.Instance.movement.x == -1)
         {
-            rb.AddForceAtPosition( Vector3.up * -flipSpeed, posLeft.transform.position);
+            rb.AddForceAtPosition(Vector3.up * -flipSpeed, posLeft.transform.position);
         }
 
-        //rb.AddTorque(new Vector3(moveSpeed * InputController.Instance.movement.y, 0, 0));
-       // rb.AddTorque(Vector3.Cross(transform.right,Vector3.up) * -InputController.Instance.movement.x * flipSpeed);
 
+        if (InputController.Instance.movement.y != 0)
+        {
+            Quaternion rotation = Quaternion.LookRotation(targetDirection);
+            rotation = Quaternion.Euler(transform.rotation.x, rotation.eulerAngles.y, transform.rotation.z);
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, camLookSpeed * Time.deltaTime);
+        }
     }
 }
