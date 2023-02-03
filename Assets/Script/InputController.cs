@@ -37,7 +37,7 @@ public class InputController : MonoBehaviour
     }
 
     public Vector2 movement => inputActions.PlayerControl.Movement.ReadValue<Vector2>();
-    public Vector2 mouseInput => inputActions.PlayerControl.MouseInput.ReadValue<Vector2>();
+    public Vector2 MouseInput => inputActions.PlayerControl.MouseInput.ReadValue<Vector2>().normalized;
     public Vector2 mousePos => inputActions.PlayerControl.MousePos.ReadValue<Vector2>();
     public bool LeftClick => inputActions.PlayerControl.Shoot.triggered;
     public bool LeftClickHold => inputActions.PlayerControl.Shoot.ReadValue<float>() > 0.1f;
