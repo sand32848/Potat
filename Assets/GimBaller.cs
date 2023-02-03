@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class GimBaller : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject player;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.rotation = Quaternion.Euler(0, player.transform.rotation.eulerAngles.y, 0);
+
+        print(player.transform.rotation.y);
     }
 }

@@ -4,31 +4,45 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] GameObject camera;
-    [SerializeField] private Transform playerTransform;
+    [SerializeField]
+    private float _mouseSensitivity = 3.0f;
 
-    private Vector3 _cameraOffset;
-    [SerializeField]private float smoothFactor = 0.5f;
-    [SerializeField] private float rotationSpeed = 5.0f;
-    
+    private float _rotationY;
+    private float _rotationX;
 
-    void Start()
+    [SerializeField]
+    private Transform _target;
+
+    [SerializeField]
+    private float _distanceFromTarget = 3.0f;
+
+    private Vector3 _currentRotation;
+    private Vector3 _smoothVelocity = Vector3.zero;
+
+    [SerializeField]
+    private float _smoothTime = 0.2f;
+
+    [SerializeField]
+    private Vector2 _rotationXMinMax = new Vector2(-40, 40);
+
+    void Update()
     {
-        _cameraOffset = transform.position - playerTransform.position;
+        float mouseX = Input.GetAxis("Mouse X") * _mouseSensitivity;
+        float mouseY = Input.GetAxis("Mouse Y") * _mouseSensitivity;
+
+        _rotationY += mouseX;
+        _rotationX += mouseY;
+
+        // Apply clamping for x rotation 
+        _rotationX = Mathf.Clamp(_rotationX, _rotationXMinMax.x, _rotationXMinMax.y);
+
+        Vector3 nextRotation = new Vector3(_rotationX, _rotationY);
+
+        // Apply damping between rotation changes
+        _currentRotation = Vector3.SmoothDamp(_currentRotation, nextRotation, ref _smoothVelocity, _smoothTime);
+        transform.localEulerAngles = _currentRotation;
+
+        // Substract forward vector of the GameObject to point its forward vector to the target
+        transform.position = _target.position - transform.forward * _distanceFromTarget;
     }
-
-    // Update is called once per frame
-    private void LateUpdate()
-    {
-        print(InputController.Instance.MouseInput);
-
-        Quaternion camTurnAngle = Quaternion.AngleAxis(InputController.Instance.MouseInput.x * rotationSpeed, Vector3.up);
-
-        _cameraOffset = camTurnAngle * _cameraOffset;
-
-        Vector3 newPos = playerTransform.position + _cameraOffset;
-
-        transform.position = Vector3.Slerp(transform.position, newPos, smoothFactor);
-    }
-    
 }

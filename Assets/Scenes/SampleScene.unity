@@ -503,9 +503,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 991112361}
-  moveSpeed: 5
+  moveSpeed: 7
   ballTracker: {fileID: 622587538}
-  lookSpeed: 5
+  lookSpeed: 7
 --- !u!136 &991112364
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -869,3 +869,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b84f5a092aff54d88699e4846e31b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 991112356}

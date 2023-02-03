@@ -11,16 +11,7 @@ public class PotatoController : MonoBehaviour
     private GameObject potato => transform.GetComponent<GameObject>();
     private float cameraTorque;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void FixedUpdate()
     {
@@ -37,6 +28,6 @@ public class PotatoController : MonoBehaviour
         // Calculate a rotation a step closer to the target and applies rotation to this object
         transform.rotation = Quaternion.LookRotation(newDirection);
 
-        rb.AddForce(transform.forward * InputController.Instance.movement.y * moveSpeed);
+        rb.AddTorque(transform.forward * InputController.Instance.movement.y * moveSpeed);
     }
 }
