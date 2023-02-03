@@ -419,7 +419,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622587538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 2.55, z: 16.84}
+  m_LocalPosition: {x: -0, y: 2.55, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 991112362}
   - component: {fileID: 991112364}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: pOTATO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -454,7 +454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991112356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.81, y: -4.2, z: -12.213063}
+  m_LocalPosition: {x: -3.799577, y: -3.14, z: -12.225289}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -503,9 +503,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 991112361}
-  moveSpeed: 7
+  moveSpeed: 15
+  flipSpeed: 10
+  camLookSpeed: 1
   ballTracker: {fileID: 622587538}
-  lookSpeed: 7
 --- !u!136 &991112364
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -597,7 +598,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162365599}
-  m_LocalRotation: {x: 0.06638449, y: -0.7039837, z: 0.06638448, w: 0.7039838}
+  m_LocalRotation: {x: 0.018087666, y: -0.7074427, z: 0.01811675, w: 0.706307}
   m_LocalPosition: {x: 3.81, y: -2.7499998, z: -12.213063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -800,7 +801,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828015360}
-  m_LocalRotation: {x: 0.06638449, y: -0.7039837, z: 0.06638448, w: 0.7039838}
+  m_LocalRotation: {x: 0.018087666, y: -0.7074427, z: 0.01811675, w: 0.706307}
   m_LocalPosition: {x: 3.81, y: -2.7499998, z: -12.213063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -838,7 +839,7 @@ GameObject:
   - component: {fileID: 2020633419}
   m_Layer: 0
   m_Name: GimBaller
-  m_TagString: Untagged
+  m_TagString: Gimball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

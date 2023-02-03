@@ -10,6 +10,6 @@ public class GimBaller : MonoBehaviour
     {
         transform.rotation = Quaternion.Euler(0, player.transform.rotation.eulerAngles.y, 0);
 
-        print(player.transform.rotation.y);
+        
     }
 }
