@@ -821,10 +821,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e123dc89bce794fb44180fabc75dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 1162365599}
-  playerTransform: {fileID: 991112360}
-  smoothFactor: 1
-  rotationSpeed: 1
+  _mouseSensitivity: 3
+  _target: {fileID: 991112360}
+  _distanceFromTarget: 10
+  _smoothTime: 0.2
+  _rotationXMinMax: {x: 10, y: 50}
 --- !u!1 &2020633417
 GameObject:
   m_ObjectHideFlags: 0
