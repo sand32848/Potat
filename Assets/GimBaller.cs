@@ -8,6 +8,10 @@ public class GimBaller : MonoBehaviour
 
     void Update()
     {
-        transform.position = player.transform.position;
+        //transform.position = new Vector3(player.transform.position.x,player.transform.position.y, player.transform.position.z - 3);
+
+        Vector3 lookPosition = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+
+        transform.LookAt(lookPosition);
     }
 }
