@@ -47,7 +47,7 @@ public class SlowDebuff : MonoBehaviour
 
         if (debuffOn || timer >= 0)
         {
-            rb.maxAngularVelocity = 3;
+            rb.maxAngularVelocity = speedLimiter;
         }
         else
         {

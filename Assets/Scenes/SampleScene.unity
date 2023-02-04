@@ -5423,7 +5423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <linger>k__BackingField: 1
-  <duration>k__BackingField: 5
+  <duration>k__BackingField: 20
 --- !u!65 &1752517362
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5639,7 +5639,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8035126593333071516, guid: 15c913003a4c89f43a9466587ce9e277, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.009913968
+      value: 0.009913959
       objectReference: {fileID: 0}
     - target: {fileID: 8035126593333071516, guid: 15c913003a4c89f43a9466587ce9e277, type: 3}
       propertyPath: m_LocalRotation.y
@@ -5647,7 +5647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8035126593333071516, guid: 15c913003a4c89f43a9466587ce9e277, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.02016601
+      value: 0.02016599
       objectReference: {fileID: 0}
     - target: {fileID: 8035126593333071517, guid: 15c913003a4c89f43a9466587ce9e277, type: 3}
       propertyPath: _distanceFromTarget
@@ -5719,7 +5719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8035126594011171132, guid: 15c913003a4c89f43a9466587ce9e277, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.009913968
+      value: 0.009913959
       objectReference: {fileID: 0}
     - target: {fileID: 8035126594011171132, guid: 15c913003a4c89f43a9466587ce9e277, type: 3}
       propertyPath: m_LocalRotation.y
@@ -5727,7 +5727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8035126594011171132, guid: 15c913003a4c89f43a9466587ce9e277, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.02016601
+      value: 0.02016599
       objectReference: {fileID: 0}
     - target: {fileID: 8035126594241556278, guid: 15c913003a4c89f43a9466587ce9e277, type: 3}
       propertyPath: m_LocalScale.x
