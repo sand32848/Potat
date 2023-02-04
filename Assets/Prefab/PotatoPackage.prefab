@@ -268,7 +268,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8035126593333071518}
-  m_LocalRotation: {x: -0.1373823, y: -0.7016326, z: -0.14074767, w: 0.6848561}
+  m_LocalRotation: {x: -0.13738227, y: -0.7016326, z: -0.14074765, w: 0.6848561}
   m_LocalPosition: {x: 32.782516, y: -14.978032, z: -0.4625721}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -423,8 +423,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8035126594011171073}
-  m_LocalRotation: {x: -0.1373823, y: -0.7016326, z: -0.14074767, w: 0.6848561}
-  m_LocalPosition: {x: 32.782516, y: -14.978032, z: -0.4625721}
+  m_LocalRotation: {x: 0.70090926, y: 1.0560153e-28, z: -1.0377433e-28, w: 0.71325046}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -531,9 +531,10 @@ GameObject:
   - component: {fileID: 8035126594241556276}
   - component: {fileID: 8035126594241556274}
   - component: {fileID: 8035126594241556275}
+  - component: {fileID: 885616766998916690}
   m_Layer: 6
   m_Name: Potato
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -612,7 +613,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8035126594241556282}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 0e4babc4479298443951bc1ebe4f5796, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.63
@@ -631,11 +632,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5690530bacccc9141920ad271bf34a8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 4
+  timer: 1.5
   rayRange: 1
   layerMask:
     serializedVersion: 2
     m_Bits: 55
+--- !u!114 &885616766998916690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8035126594241556282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1a3440f589c87419ed1bcf79b7972c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Normal: {fileID: 13400000, guid: 0e4babc4479298443951bc1ebe4f5796, type: 2}
+  Bounce: {fileID: 13400000, guid: 29edfaa48be3d3541be6c4128b682492, type: 2}
+  LowFric: {fileID: 13400000, guid: 08df0f33ae4a0b44389547a1492531d9, type: 2}
 --- !u!1 &8035126594542972172
 GameObject:
   m_ObjectHideFlags: 0
