@@ -33,7 +33,8 @@ public class GameHandler : MonoBehaviour
             {
                 if (mycheckpoint[i].isactive)
                 {
-                    Debug.Log("stuck?");
+                    player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                    player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                     player.transform.position = mycheckpoint[i].respawn.position;
                     break;
                 }

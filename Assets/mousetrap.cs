@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class mousetrap : MonoBehaviour
 {
-    [SerializeField] Damagezone damagezone;
+    [SerializeField] BoxCollider damagezone;
     [SerializeField] Animator animator;
     GameHandler gameHandler;
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class mousetrap : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.transform.tag == "player")
+        if(collision.transform.tag == "Player")
         {
             damagezone.enabled = true;
             animator.Play("Activate");

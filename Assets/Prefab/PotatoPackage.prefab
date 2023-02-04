@@ -269,7 +269,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8035126593333071518}
-  m_LocalRotation: {x: -0.21916223, y: -0.68634135, z: -0.22991207, w: 0.65425074}
+  m_LocalRotation: {x: -0.1373823, y: -0.7016326, z: -0.14074768, w: 0.6848561}
   m_LocalPosition: {x: 32.782516, y: -14.978032, z: -0.4625721}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -454,8 +454,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8035126594011171073}
-  m_LocalRotation: {x: -0.21916223, y: -0.68634135, z: -0.22991207, w: 0.65425074}
-  m_LocalPosition: {x: 9.91, y: -5.878737, z: -0.98352337}
+  m_LocalRotation: {x: -0.1373823, y: -0.7016326, z: -0.14074768, w: 0.6848561}
+  m_LocalPosition: {x: 32.782516, y: -14.978033, z: -0.4625721}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -663,7 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5690530bacccc9141920ad271bf34a8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 1.5
+  timer: 6
   rayRange: 1
   layerMask:
     serializedVersion: 2

@@ -56,6 +56,8 @@ public class InputController : MonoBehaviour
 
     public bool G => inputActions.PlayerControl.G.triggered;
 
+    
+
     public void enableInput()
     {
         inputActions.PlayerControl.Enable();
