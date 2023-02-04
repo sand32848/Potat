@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameHandler : MonoBehaviour
 {
     [SerializeField] bool isdead;
-
+    public bool _isdead => isdead;
     [SerializeField] checkpoint[] mycheckpoint;
     [SerializeField] Transform player;
 
