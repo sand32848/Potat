@@ -14,6 +14,10 @@ public class PotatoController : MonoBehaviour
     [SerializeField] private GameObject posRight;
     [SerializeField] private GameObject posLeft;
 
+    private GameObject gimball => GameObject.FindGameObjectWithTag("Gimball");
+
+    private GameObject cam => Camera.main.gameObject;
+
 
     private void Start()
     {
@@ -31,7 +35,7 @@ public class PotatoController : MonoBehaviour
         // Draw a ray pointing at our target in
         Debug.DrawRay(transform.position, newDirection, Color.red);
 
-        rb.AddForce(new Vector3(0, 0, moveSpeed) * InputController.Instance.movement.y);
+        rb.AddForce(cam.transform.forward * InputController.Instance.movement.y * moveSpeed);
 
         if (InputController.Instance.movement.x == 1)
         {
@@ -42,14 +46,13 @@ public class PotatoController : MonoBehaviour
             rb.AddForceAtPosition(Vector3.up * -flipSpeed, posLeft.transform.position);
         }
 
-        //if (InputController.Instance.movement.y != 0)
-        //{
-        //    //transform.rotation = Quaternion.LookRotation(newDirection);
 
-        //    rb.transform
-        //    .Rotate(Vector3.Cross(rb.transform.forward,rb.transform.right) * camLookSpeed);
-        //}
 
-        rb.transform.Rotate(2, 0, 0);
+        if (InputController.Instance.movement.y != 0)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, gimball.transform.rotation, Time.deltaTime * camLookSpeed);
+        }   
+
+
     }
 }
