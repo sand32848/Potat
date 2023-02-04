@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 8035126593333071516}
   - component: {fileID: 8035126593333071519}
   - component: {fileID: 8035126593333071517}
+  - component: {fileID: 1495680267}
   m_Layer: 0
   m_Name: CamFollower
   m_TagString: Untagged
@@ -268,7 +269,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8035126593333071518}
-  m_LocalRotation: {x: -0.13738227, y: -0.7016326, z: -0.14074765, w: 0.6848561}
+  m_LocalRotation: {x: -0.21916223, y: -0.68634135, z: -0.22991207, w: 0.65425074}
   m_LocalPosition: {x: 32.782516, y: -14.978032, z: -0.4625721}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -300,7 +301,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
-    NearClipPlane: 0.3
+    NearClipPlane: 0.001
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
@@ -332,6 +333,36 @@ MonoBehaviour:
   _distanceFromTarget: 1
   _smoothTime: 0.2
   _rotationXMinMax: {x: 10, y: 50}
+--- !u!114 &1495680267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8035126593333071518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 1
+  m_IgnoreTag: 
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 0.1
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.1
+  m_Strategy: 1
+  m_MaximumEffort: 4
+  m_SmoothingTime: 0
+  m_Damping: 0
+  m_DampingWhenOccluded: 0
+  m_OptimalTargetDistance: 0
 --- !u!1 &8035126593397484196
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,8 +454,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8035126594011171073}
-  m_LocalRotation: {x: 0.70090926, y: 1.0560153e-28, z: -1.0377433e-28, w: 0.71325046}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.21916223, y: -0.68634135, z: -0.22991207, w: 0.65425074}
+  m_LocalPosition: {x: 9.91, y: -5.878737, z: -0.98352337}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -455,7 +486,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -637,6 +668,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 55
+  ignoredead: 0
 --- !u!114 &885616766998916690
 MonoBehaviour:
   m_ObjectHideFlags: 0
