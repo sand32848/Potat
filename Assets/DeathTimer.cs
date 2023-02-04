@@ -9,6 +9,7 @@ public class DeathTimer : MonoBehaviour
     private float _timer;
     [SerializeField]private LayerMask layerMask;
     GameHandler gameHandler;
+    public bool ignoredead = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,8 +36,12 @@ public class DeathTimer : MonoBehaviour
 
         if(timer <= 0)
         {
-            death();
-            timer = _timer;
+            if (!ignoredead)
+            {
+                death();
+                timer = _timer;
+            }
+            
         }
     }
 
