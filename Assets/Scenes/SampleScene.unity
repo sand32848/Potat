@@ -249,6 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 265c4bcf78d73e64aa13ad7211e05a8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bounceForce: 300
 --- !u!65 &237627898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -256,7 +257,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237627896}
-  m_Material: {fileID: 13400000, guid: 5dd612187cb287143abcdc06e1fe608a, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -5485,7 +5486,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8035126593333071516, guid: 15c913003a4c89f43a9466587ce9e277, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.13738228
+      value: -0.1373823
       objectReference: {fileID: 0}
     - target: {fileID: 8035126593333071516, guid: 15c913003a4c89f43a9466587ce9e277, type: 3}
       propertyPath: m_LocalRotation.z
@@ -5541,7 +5542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8035126594011171132, guid: 15c913003a4c89f43a9466587ce9e277, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.13738228
+      value: -0.1373823
       objectReference: {fileID: 0}
     - target: {fileID: 8035126594011171132, guid: 15c913003a4c89f43a9466587ce9e277, type: 3}
       propertyPath: m_LocalRotation.z
