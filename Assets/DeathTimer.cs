@@ -25,12 +25,12 @@ public class DeathTimer : MonoBehaviour
         {
             timer = _timer;
 
-            print(hit.transform.gameObject);
+          
         }
         else
         {
             timer -= Time.deltaTime;
-            print("count");
+       
         }
 
         if(timer <= 0)
@@ -43,6 +43,6 @@ public class DeathTimer : MonoBehaviour
     public void death()
     {
         gameHandler.callplayerdead();
-        print("Dead");
+      
     }
 }
