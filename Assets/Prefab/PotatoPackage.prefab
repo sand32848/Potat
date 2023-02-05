@@ -579,6 +579,7 @@ GameObject:
   - component: {fileID: 8035126594241556274}
   - component: {fileID: 6141421118136502532}
   - component: {fileID: 885616766998916690}
+  - component: {fileID: 6228919632021094329}
   m_Layer: 6
   m_Name: Potato
   m_TagString: Player
@@ -694,6 +695,24 @@ MonoBehaviour:
   Normal: {fileID: 13400000, guid: 0e4babc4479298443951bc1ebe4f5796, type: 2}
   Bounce: {fileID: 13400000, guid: 29edfaa48be3d3541be6c4128b682492, type: 2}
   LowFric: {fileID: 13400000, guid: 08df0f33ae4a0b44389547a1492531d9, type: 2}
+--- !u!114 &6228919632021094329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8035126594241556282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdf5763b523a8ed44a77e8d248457c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debuffOn: 0
+  rayRange: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 183
+  speedLimiter: 15
 --- !u!1 &8035126594542972172
 GameObject:
   m_ObjectHideFlags: 0

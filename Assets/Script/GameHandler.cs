@@ -8,6 +8,8 @@ public class GameHandler : MonoBehaviour
     public bool _isdead => isdead;
     [SerializeField] checkpoint[] mycheckpoint;
     [SerializeField] Transform player;
+    [SerializeField] Animator winscene;
+    [SerializeField] GameObject ending;
 
     [System.Serializable]
     public class checkpoint
@@ -60,5 +62,11 @@ public class GameHandler : MonoBehaviour
                 mycheckpoint[i].isactive = false;
             }
         }
+    }
+
+    public void win()
+    {
+        ending.SetActive(true);
+        winscene.Play("ending");
     }
 }

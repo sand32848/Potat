@@ -492,4 +492,11 @@ AnimationClip:
     script: {fileID: 0}
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.38333333
+    functionName: onendmousetrap
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 875b6320c42f6234b97b1aa1eab6b289, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
