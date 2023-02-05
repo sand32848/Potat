@@ -255,6 +255,7 @@ GameObject:
   - component: {fileID: 8035126593333071519}
   - component: {fileID: 8035126593333071517}
   - component: {fileID: 1495680267}
+  - component: {fileID: 495614178166955612}
   m_Layer: 0
   m_Name: CamFollower
   m_TagString: Untagged
@@ -363,6 +364,21 @@ MonoBehaviour:
   m_Damping: 0
   m_DampingWhenOccluded: 0
   m_OptimalTargetDistance: 0
+--- !u!114 &495614178166955612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8035126593333071518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a07473787407c5469b903009ad5c496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!1 &8035126593397484196
 GameObject:
   m_ObjectHideFlags: 0
