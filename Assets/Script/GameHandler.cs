@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class GameHandler : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class GameHandler : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] Animator winscene;
     [SerializeField] GameObject ending;
+
+    [SerializeField] CanvasGroup sceneTransitionCanvas;
 
     [System.Serializable]
     public class checkpoint
@@ -64,9 +67,25 @@ public class GameHandler : MonoBehaviour
         }
     }
 
+    IEnumerator showWin()
+    {
+        Tween myTween = sceneTransitionCanvas.DOFade(1, 0.75f);
+
+        yield return myTween.WaitForCompletion();
+
+        ending.SetActive(true);
+
+        Tween myTween2 = sceneTransitionCanvas.DOFade(0, 0.5f);
+
+        yield return myTween2.WaitForCompletion();
+
+        winscene.Play("ending");
+    }
+
     public void win()
     {
-        ending.SetActive(true);
-        winscene.Play("ending");
+
+        StartCoroutine(showWin());
+    
     }
 }
