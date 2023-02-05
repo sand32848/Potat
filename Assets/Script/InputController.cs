@@ -56,7 +56,24 @@ public class InputController : MonoBehaviour
 
     public bool G => inputActions.PlayerControl.G.triggered;
 
-    
+    private void Update()
+    {
+        GetPressedNumber();
+    }
+
+    public int GetPressedNumber()
+    {
+        for (int number = 0; number <= 9; number++)
+        {
+            if (Input.GetKeyDown(number.ToString()))
+            {
+                print(number);
+                return number;
+            }
+        }
+
+        return -1;
+    }
 
     public void enableInput()
     {
