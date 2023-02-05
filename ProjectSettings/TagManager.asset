@@ -7,6 +7,7 @@ TagManager:
   - Gimball
   - Handler
   - Wall
+  - Weak
   layers:
   - Default
   - TransparentFX
