@@ -30,7 +30,7 @@ public class PotatoController : MonoBehaviour
     {
         slopeMoveDirection = Vector3.ProjectOnPlane(gimball.transform.rotation.eulerAngles.normalized, slopeHit.normal);
 
-        print(rb.velocity.normalized);
+     
 
         if (onSlope())
         {
