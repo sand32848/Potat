@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class loadmenu : MonoBehaviour
 {
+    [SerializeField] SceneLoader loader;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,6 @@ public class loadmenu : MonoBehaviour
 
     public void loadMmenu()
     {
-        SceneManager.LoadScene(0);
+        loader.startLoadLevel(0);
     }
 }
