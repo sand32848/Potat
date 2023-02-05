@@ -40,29 +40,15 @@ public class InputController : MonoBehaviour
 
     public Vector2 movement => inputActions.PlayerControl.Movement.ReadValue<Vector2>();
     public Vector2 MouseInput => inputActions.PlayerControl.MouseInput.ReadValue<Vector2>().normalized;
-    public Vector2 mousePos => inputActions.PlayerControl.MousePos.ReadValue<Vector2>();
-    public bool LeftClick => inputActions.PlayerControl.Shoot.triggered;
-    public bool LeftClickHold => inputActions.PlayerControl.Shoot.ReadValue<float>() > 0.1f;
-    public bool RightClick => inputActions.PlayerControl.Zoom.ReadValue<float>() > 0.1f;
-    public bool R => inputActions.PlayerControl.Reload.triggered;
-    public bool E => inputActions.PlayerControl.Interact.triggered;
-    public bool E_UP => inputActions.PlayerControl.E_up.triggered;
-    public bool E_Down => inputActions.PlayerControl.E_down.triggered;
-    public bool E_updown => inputActions.PlayerControl.E_upDown.triggered;
-    public bool Heal => inputActions.PlayerControl.Heal.triggered;
-    public bool ESC => inputActions.UI.ESC.triggered;
-    public bool Space => inputActions.PlayerControl.Jump.triggered;
-    public bool LeftShift => inputActions.PlayerControl.LeftShift.ReadValue<float>() > 0.1f;
-    public bool Dash => inputActions.PlayerControl.Dash.triggered;
-    public bool debug => inputActions.PlayerControl.Debug.triggered;
 
-    public bool G => inputActions.PlayerControl.G.triggered;
+    public bool R => inputActions.PlayerControl.Reload.triggered;
+
+    public bool ESC => inputActions.PlayerControl.ESC.triggered;
+
 
     private void Update()
     {
         GetPressedNumber();
-
-        print(R);
     }
 
     public int GetPressedNumber()
