@@ -11,6 +11,7 @@ public class GameHandler : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] Animator winscene;
     [SerializeField] GameObject ending;
+    [SerializeField] SceneLoader sceneLoader;
 
     [SerializeField] CanvasGroup sceneTransitionCanvas;
 
@@ -80,6 +81,12 @@ public class GameHandler : MonoBehaviour
         yield return myTween2.WaitForCompletion();
 
         winscene.Play("ending");
+
+        yield return new WaitForSeconds(3f);
+
+        sceneLoader.startLoadLevel(0);
+
+
     }
 
     public void win()
