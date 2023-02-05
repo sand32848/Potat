@@ -36,6 +36,8 @@ public class InputController : MonoBehaviour
         inputActions.Disable();
     }
 
+    
+
     public Vector2 movement => inputActions.PlayerControl.Movement.ReadValue<Vector2>();
     public Vector2 MouseInput => inputActions.PlayerControl.MouseInput.ReadValue<Vector2>().normalized;
     public Vector2 mousePos => inputActions.PlayerControl.MousePos.ReadValue<Vector2>();
@@ -59,6 +61,8 @@ public class InputController : MonoBehaviour
     private void Update()
     {
         GetPressedNumber();
+
+        print(R);
     }
 
     public int GetPressedNumber()

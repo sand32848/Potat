@@ -2,7 +2,7 @@
     "name": "PlayerAction",
     "maps": [
         {
-            "name": "New action map",
+            "name": "PlayerControl",
             "id": "3dd3dec7-d330-4df6-8464-265d8afe3b99",
             "actions": [
                 {
@@ -54,6 +54,15 @@
                     "name": "Checkpoint4",
                     "type": "Button",
                     "id": "93ce9048-3ce9-4602-9969-8c000c76ed61",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Reload",
+                    "type": "Button",
+                    "id": "85124570-353e-47e3-ab85-3d08d857f461",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -168,6 +177,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Checkpoint4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ffea4e2a-12be-46b8-97c1-8c47851a8d45",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reload",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
