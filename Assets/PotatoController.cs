@@ -35,7 +35,7 @@ public class PotatoController : MonoBehaviour
         if (onSlope())
         {
     
-            rb.AddForce(slopeMoveDirection * InputController.Instance.movement.y * moveSpeed * 4f);
+            rb.AddForce(slopeMoveDirection * InputController.Instance.movement.y * moveSpeed * 4.5f);
   
             Debug.DrawRay(transform.position, slopeMoveDirection * 5, Color.red);
             print(slopeMoveDirection);

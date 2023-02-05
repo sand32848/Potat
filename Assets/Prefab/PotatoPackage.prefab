@@ -269,7 +269,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8035126593333071518}
-  m_LocalRotation: {x: -0.1373823, y: -0.7016326, z: -0.14074768, w: 0.6848561}
+  m_LocalRotation: {x: -0.13738231, y: -0.7016327, z: -0.1407477, w: 0.6848561}
   m_LocalPosition: {x: 32.782516, y: -14.978032, z: -0.4625721}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -454,8 +454,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8035126594011171073}
-  m_LocalRotation: {x: -0.1373823, y: -0.7016326, z: -0.14074768, w: 0.6848561}
-  m_LocalPosition: {x: 32.782516, y: -14.978033, z: -0.4625721}
+  m_LocalRotation: {x: -0.13738231, y: -0.7016327, z: -0.1407477, w: 0.6848561}
+  m_LocalPosition: {x: 32.782516, y: -14.978031, z: -0.4625721}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -561,7 +561,6 @@ GameObject:
   - component: {fileID: 8035126594241556277}
   - component: {fileID: 8035126594241556276}
   - component: {fileID: 8035126594241556274}
-  - component: {fileID: 8035126594241556275}
   - component: {fileID: 885616766998916690}
   m_Layer: 6
   m_Name: Potato
@@ -651,24 +650,6 @@ CapsuleCollider:
   m_Height: 2.55
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8035126594241556275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8035126594241556282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5690530bacccc9141920ad271bf34a8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 6
-  rayRange: 1
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 55
-  ignoredead: 0
 --- !u!114 &885616766998916690
 MonoBehaviour:
   m_ObjectHideFlags: 0
