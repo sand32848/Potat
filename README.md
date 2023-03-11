@@ -12,6 +12,5 @@ Potat a silly little game where you play as a sentinent potato who tried to esca
 </p>
 
 ## License
-MIT @ [ApiwatR](https://github.com/sand32848)
-<br>Made by [ApiwatR](https://github.com/sand32848)
+MIT @ [ApiwatR](https://github.com/sand32848
 
